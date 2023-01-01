@@ -61,5 +61,5 @@ class FitIncrementModel(IncrementModel):
         self.global_avg_increment = increment(first_numbers)+
 
     
-data = [50, 52, 60]
+data = [50, 52, 60, 77]
 print(increment(data))

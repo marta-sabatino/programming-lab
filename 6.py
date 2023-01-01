@@ -77,5 +77,5 @@ class NumericalCSVFile(CSVFile):
         return numerical_data
 
 
-myfile = CSVFile('shampoo_sales.csv')
-print(myfile.get_data(10,14))
+# myfile = CSVFile('shampoo_sales.csv')
+# print(myfile.get_data(10,14))

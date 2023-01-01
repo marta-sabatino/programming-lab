@@ -1,8 +1,3 @@
-
-#==============================
-#  Classe per file CSV
-#==============================
-
 class CSVFile:
 
     def __init__(self, name):
@@ -64,12 +59,6 @@ class CSVFile:
             # Quando ho processato tutte le righe, ritorno i dati
             return data
 
-
-
-#==============================
-# Classe per file NumericalCSV
-#==============================
-
 class NumericalCSVFile(CSVFile):
     
     def get_data(self):
@@ -113,12 +102,6 @@ class NumericalCSVFile(CSVFile):
                 numerical_data.append(numerical_row)
 
         return numerical_data
-
-   
-
-#==============================
-#  Esempio di utilizzo
-#==============================
 
 #mio_file = CSVFile(name='shampoo_sales.csv')
 #print('Nome del file: "{}"'.format(mio_file.name))

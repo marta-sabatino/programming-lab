@@ -78,4 +78,4 @@ class NumericalCSVFile(CSVFile):
 
 
 myfile = CSVFile('shampoo_sales.csv')
-print(myfile.get_data(10,15))
+print(myfile.get_data(10,14))

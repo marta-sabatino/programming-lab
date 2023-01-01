@@ -29,8 +29,8 @@ def sum_csv(file_name):
     else: # altrimenti 
         return sum(values) # ritorno la somma dei valori
 
-print('\nprova su file vero:\n')
-print(sum_csv('shampoo_sales.csv'))
+# print('\nprova su file vero:\n')
+# print(sum_csv('shampoo_sales.csv'))
 # print('\nprova su file vuoto:\n')
 # print(sum_csv('empty_file.csv'))
 # print('\nprova su file con valori non numerici:\n')

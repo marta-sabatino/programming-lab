@@ -24,26 +24,18 @@ class CSVFile:
             data = []
 
             file = open(self.name)
-            reader = csv.reader(file)
 
-            # counter = 0
-
-            for i in range(start):
-                next(reader)
+            counter = 0
 
             for line in file:
                 elements = line.split(',')
                 elements[-1] = elements[-1].strip()
+                counter += 1
 
-                # while counter < start:
-                #     counter += 1
-                #     continue
-
-                if elements[0] != 'Date':
-                    # counter += 1
+                if elements[0] != 'Date' and counter >= start:
                     data.append(elements)
 
-                if reader.line_num == end: 
+                if counter == end: 
                     break
 
         file.close()

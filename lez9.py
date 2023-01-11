@@ -52,13 +52,14 @@ class IncrementModel(Model):
 class FitIncrementModel(IncrementModel):
     def __init__(self, global_avg_increment):
         self.global_avg_increment = global_avg_increment
+        # lunghezza della finestra
 
     first_numbers = [8, 19, 31, 41]
     last_numbers = [50, 52, 60]
 
     def fit(self, data):
         super().fit(data)
-        self.global_avg_increment = increment(first_numbers)+
+        self.global_avg_increment = increment(first_numbers)
 
     
 data = [50, 52, 60, 77]

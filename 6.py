@@ -1,5 +1,3 @@
-import csv
-
 class CSVFile:
     def __init__(self, name):
         self.name = name
@@ -32,12 +30,34 @@ class CSVFile:
                 elements[-1] = elements[-1].strip()
                 counter += 1
 
-                if elements[0] != 'Date' and counter >= start:
-                    data.append(elements)
+            # non gestisce caso in cui solo start/end è None
 
-                if counter == end: 
-                    break
+                # if start == None and end == None:
+                #     if elements[0]!='Date':
+                #         data.append(elements)
 
+                # else:
+                try:
+                    if start == None:
+                        start = 0
+                    if end == None:
+                        end = len(list(file))
+
+                    start = int(start)
+                    end = int(end)
+
+                    if end < start:
+                        raise Exception
+
+                    if elements[0] != 'Date' and counter >= start:
+                        data.append(elements)
+
+                    if counter == end: 
+                        break
+
+                except:
+                    raise Exception
+    
         file.close()
 
         return data
@@ -69,5 +89,5 @@ class NumericalCSVFile(CSVFile):
         return numerical_data
 
 
-# myfile = CSVFile('shampoo_sales.csv')
-# print(myfile.get_data(10,14))
+myfile = CSVFile('shampoo_sales.csv')
+print(myfile.get_data())

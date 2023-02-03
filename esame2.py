@@ -34,6 +34,6 @@ class Diff:
 
         return result
 
-# diff = Diff()
-# result = diff.compute([2,4,8,16])
-# print(result) # Deve stampare a schermo [2.0,4.0,8.0]
+diff = Diff()
+result = diff.compute([2,4,8,16])
+print(result) # Deve stampare a schermo [2.0,4.0,8.0]
